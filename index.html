@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Walter White Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img class="missedAWide" src="Walter_White2.webp">
+        <button class="btn"><img src="135669-200.png"></button>
+    </div>
+    <audio id="audioElement" src="RPReplay_Final1698858572.mp3"></audio>
+    <script>
+        function delay(ms) {
+            return new Promise((resolve) => {
+            setTimeout(resolve, ms);
+            });
+        }
+
+        const button = document.querySelector(".btn");
+        const audioElement = document.getElementById('audioElement')
+
+        button.addEventListener('click', async function() {
+            const image = document.querySelector(".missedAWide");
+
+            button.classList.add("hide");
+            image.classList.add("reveal");
+            audioElement.currentTime = 0;
+            audioElement.play();
+            await delay(17000);
+            button.classList.remove("hide");
+            image.classList.remove("reveal");
+            audioElement.pause();
+        })
+    </script>
+</body>
+</html>

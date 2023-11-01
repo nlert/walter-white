@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: linear-gradient(315deg, #026a24, #124939);
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.missedAWide {
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    opacity: 0;
+    transition: 1.5s;
+    z-index: 99;
+}
+
+.reveal {
+    opacity: 1 !important;
+}
+
+.hide {
+    z-index: 1 !important;
+}
+
+.btn {
+    background-color: #d29e2d;
+    border: 0;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 15px 10px #a57a23 inset;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
